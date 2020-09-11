@@ -1,0 +1,46 @@
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="user_card">
+      <div class="d-flex justify-content-center">
+        <div class="brand_logo_container">
+          <%= image_tag  "sign", class:"brand_logo" %>
+      </div>
+      </div>
+      <div class="d-flex justify-content-center form_container">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="input-group mb-3">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control input_user neo-form', placeholder:"Email" %>
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+              <%= f.password_field :password, autocomplete: "current-password", class: 'form-control input_pass neo-form', placeholder:"Mots de passe" %>
+          </div>
+          <div class="form-group">
+                <% if devise_mapping.rememberable? %>
+                    <div class="d-flex m-3">
+                      <div class="primary-switch mr-2">
+                        <input type="checkbox" value= "1" name="user[remember_me]" id="default-switch">
+                        <label for="default-switch"></label>
+                      </div>
+                      <%= f.label :Rester_connecter %>
+                    </div>
+                <% end %>
+          </div>
+            <div class="d-flex justify-content-center mt-3 login_container">
+            <%= f.submit "Se connecter", class: 'btn btn-primary btn-block' %>
+          </div>
+        <% end %>
+      </div>
+      <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

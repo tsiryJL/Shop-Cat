@@ -1,0 +1,173 @@
+
+.modal-body, .modal-header, .modal-footer {
+    background: #d795d2;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.signin-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.imgFilter {
+    filter: brightness(0.80);
+}
+
+.newColorPurple {
+    background-color: #565656cf;
+    border: none;
+    color: white;
+}
+
+.logo1 {
+    animation: scaleLogo 2s infinite alternate;
+}
+
+@keyFrame scaleLogo {
+    top {
+        transform: scale(1.2);
+    }
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+.card-shadow:hover{
+    box-shadow: 0px 0px 10px black;
+}
+
+.cardImg {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container{
+    align-items: center;
+}
+
+.imgFilter {
+    width: 100%;
+    height: 100%;
+}
+
+#btn {
+    background-color: #550055;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    margin-top: 25px;
+    display: inline;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 80;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all;
+}
+
+#container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 15px;
+    background: #35424a;
+}
+
+#container h1 {
+    float: left;
+}
+
+#container form {
+    float: right;
+    margin-top: 15px;
+}
+
+#container input[type="email"] {
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+.button_1 {
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    /* padding-right: 20px; */
+    color: #ffff;
+    margin-right: 0%;
+}
+
+.login-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.login-form-1 {
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form-1 h3 {
+    text-align: center;
+    color: #333;
+}
+
+.login-container form {
+    padding: 10%;
+}
+
+.btnSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+
+.login-form-1 .btnSubmit {
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+.button_1{
+	height: 38px;
+	background:#e8491d;
+	border:0;
+	padding-left: 20px;
+	/* padding-right: 20px; */
+	color:#ffff;
+    margin-right: 0%;
+}
+
+.login-form-1 .ForgetPwd {
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-profil-body {
+    text-align: center;
+    height: 500px;
+    margin-top: 100px;
+}
+
+.logo1 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+
+.flash-popup{
+    position: absolute;
+    top: 5em;
+    right: 2%;
+    z-index: 1;
+  }

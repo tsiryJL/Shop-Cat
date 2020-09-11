@@ -1,0 +1,150 @@
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+  <div class="container">
+    <div class="overlay overlay-bg"></div>
+    <div class="row fullscreen d-flex align-items-center justify-content-start">
+      <div class="banner-content col-lg-8 col-md-12">
+        <h1 class="text-uppercase">
+          Adopt Us. <br>
+          We need your help.		
+        </h1>
+        <p class="text-white sub-head">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
+          or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+        </p>
+        <a href="#" class="primary-btn header-btn text-uppercase">Find a pet to adopt</a>
+      </div>											
+    </div>
+  </div>
+</section>
+<!-- End banner Area -->
+
+<!-- Start process Area -->
+  <section class="process-area section-gap">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="menu-content pb-60 col-lg-8">
+          <div class="title text-center">
+            <h1 class="mb-10">Process to adopt a pet</h1>
+            <p>Who are in extremely love with eco friendly system.</p>
+          </div>
+        </div>
+      </div>					
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="single-process">
+            <span class="lnr lnr-thumbs-up"></span>
+            <a href="#">
+              <h4>
+                Pet Selection
+              </h4>
+            </a>
+            <p>
+              inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="single-process">
+            <span class="lnr lnr-user"></span>
+            <a href="#">
+              <h4>
+                Meeting Authority
+              </h4>
+            </a>
+            <p>
+              inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="single-process">
+            <span class="lnr lnr-license"></span>
+            <a href="#">
+              <h4>
+                Adoption Form Filling
+              </h4>
+            </a>
+            <p>
+              inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="single-process">
+            <span class="lnr lnr-magic-wand"></span>
+            <a href="#">
+              <h4>
+                Bring to new family
+              </h4>
+            </a>
+            <p>
+              inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+            </p>
+          </div>
+        </div>																		
+      </div>
+    </div>	
+  </section>
+<!-- End process Area -->
+			
+
+<div class="container">
+  <div class="row">
+
+  <% @item.each do |i| %>
+    <div class="col-sm-4 mb-4 card-shadow">
+
+      <div class="card h-100 shadow">
+        <a href="<%= item_path(i.id) %>"><%= image_tag i.image_url, width: '100%', class: ''  %></a>
+        <div class="card-body" style="border-top:3px solid #ffc107;">
+            <h4 class="card-title">
+                <%= i.title %>
+                <span class="float-right text-muted">$<%= i.price %></span>
+            </h4>
+            <p class="card-text"><%= i.description %></p>
+            <%= form_tag carts_path, method: "post" do %>
+              <div class="form-row">
+                <div class="col">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Quantity</div>
+                    </div>
+                    <%= number_field_tag 'quantity', 1, :class => 'form-control' %>
+                    <%= hidden_field_tag 'id', i.id %>
+                  </div>
+                </div>
+              </div>
+              <%= link_to 'Voir', item_path(i.id), class: "btn btn-primary" %>
+              <%= submit_tag "Ajouter au panier", class: 'btn btn-outline-primary float-right' %>
+            <% end %>
+            <span class="entourer2">
+            </span>
+        </div>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+</div>
+
+	<!-- Start calltoaction Area -->
+			<section class="calltoaction-area section-gap relative">
+				<div class="container">
+					<div class="overlay overlay-bg"></div>						
+					<div class="row align-items-center justify-content-center">
+						<h1 class="text-white">Want to help? Become a Volunteer</h1>
+						<p class="text-white">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+						</p>
+						<div class="buttons d-flex flex-row">
+							<a href="#" class="primary-btn text-uppercase">View pdf details</a>
+							<a href="#" class="primary-btn text-uppercase">Register now</a>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End calltoaction Area -->
+
+

@@ -1,0 +1,39 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <%= image_tag @current_item.image_url, width: '100%' %>
+        </div>
+        <div class="col-sm-6 pt-3">
+            <h3><%= @current_item.title %></h3>
+            <table class="table table-hover">
+                <tr>
+                    <th>Prix</th>
+                    <td>$<%= @current_item.price %></td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td><%= @current_item.description %></td>
+                </tr>
+            </table>
+            <hr>
+            <%= form_tag carts_path, method: "post" do %>
+              <div class="form-row">
+                <div class="col-4">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Quantity</div>
+                    </div>
+                    <%= number_field_tag 'quantity', 1, :class => 'form-control' %>
+                    <%= hidden_field_tag 'id', @current_item.id %>
+                  </div>
+                </div>
+              </div>
+              <%= submit_tag "Ajouter au panier", class: 'btn btn-outline-primary' %>
+            <% end %>
+            <!--
+            <%= link_to 'Ajouter au panier', carts_path(:id => @current_item.id), method: 'post', class: 'btn btn-outline-primary btn-block' %>
+            -->
+        </div>
+    </div>
+</div>

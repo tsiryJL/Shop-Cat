@@ -1,0 +1,49 @@
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Bonjour <%= @user.first_name %> <%= @user.last_name %>, voici les détails de votre commande !</h1>
+                <p>
+                  Tu t'es inscrit sur <a href="#">cat-store.com</a> en utilisant l'e-mail suivant : <%= @user.email %>.
+                </p>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th> Title </th>
+                            <th> Description </th>
+                            <th> Image </th>
+                            <th> Quantity</th>
+                            <th> Prix </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% @current_cart.orders.each do |i| %>
+                            <tr>
+                                <td> <%= i.item.title%> </td>
+                                <td> <%= i.item.description %> </td>
+                                <td> <%= image_tag 'sleepcutecat.jpg', width: 50, class: '' %></td>
+                                <td> <%= i.quantity %></td>
+                                <td> <%= number_to_currency i.item.price, unit: "€", separator: ",", format: "%n%u" %> </td>
+                            </tr>
+                        <% end %>
+                        <tr class="table-info">
+                            <th> Total </th>
+                            <td></td>
+                            <td></td>
+                            <td> <%= @quantity_total %> </td>
+                            <td> <%= number_to_currency @price_total, unit: "€", separator: ",", format: "%n%u" %> </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <p>
+                  Pour accéder à ton espace client, connecte-toi via : <a href="<%= @url %>">cat-store.com/sign_in</a>.
+                </p>
+                <p> À très vite sur Cat Store ! </p>
+
+            </div>
+        </div>
+    </div>
+

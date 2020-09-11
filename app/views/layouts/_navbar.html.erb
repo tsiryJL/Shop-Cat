@@ -1,0 +1,35 @@
+<header id="header" id="home">
+  <div class="container main-menu">
+    <div class="row align-items-center justify-content-between d-flex">
+      <div id="logo">
+        <a href="<%= items_path %>"><%= image_tag "logo" %></a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="<%= items_path %>">Home</a></li>
+          <li>
+            <a id="myCart" class="text-white nav-link" href="<%= carts_path %>">
+              <i class="text-warning fas fa-shopping-cart"> </i> Mon panier
+              <i style="color: yellow; " id="cart_n"></i>
+            </a>
+          </li>
+          <% if user_signed_in? %>
+                <li>
+                  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+                </li>
+                <li>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                </li>
+          <% else %>
+                <li>
+                  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+                </li>
+                <li>
+                  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+                </li>
+          <% end %>
+        </ul>
+      </nav> 		
+    </div>
+  </div>
+</header>
