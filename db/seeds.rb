@@ -1,6 +1,6 @@
 Item.destroy_all
 
-12.times do |index|
+5.times do |index|
 	item = Item.create(
 		title: Faker::Creature::Cat.name,
 		# title: Faker::Lorem.sentence(word_count: 2),
