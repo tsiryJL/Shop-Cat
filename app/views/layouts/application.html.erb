@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <meta name="description" content="Cat Store Project">
-    <title>Shop Homepage - Projet e-commerce</title>
+    <meta name="description" content="Site E-commerce réaliser pour l'examen The Hacking Project">
+    <title>The Meow Shop</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,13 +15,10 @@
   </head>
   <body>
   <%= render 'layouts/navbar' %>
-  <div class="flash-popup">
+  <div class="flash-popup p-3">
     <% flash.each do |key, value| %>
-      <div class="m-0 alert alert-<%= key %> alert-dismissible fade show" role="alert">
+      <div class="m-0 alert alert-<%= key %> alert-dismissible fade show" style="padding:2em 5em;" role="alert">
         <%= value %>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
     <% end %>
   </div>

@@ -203,7 +203,7 @@ a {
 
 a:hover {
   color: #0056b3;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -4547,46 +4547,42 @@ tbody.collapse.show {
   color: #533f03;
 }
 
-.alert-danger {
+.alert-notice{
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert-alert{
+  color: red;
+  background-color: rgb(172, 55, 20)(201, 5, 5);
+}
+
+.alert-alert {
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;
 }
 
+.alert-danger{
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  border-top-color: #f1b0b7;
+}
+
+
 .alert-danger hr {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
   border-top-color: #f1b0b7;
 }
 
 .alert-danger .alert-link {
-  color: #491217;
-}
+  color: #721c24;
+  background-color: #f8d7da;
 
-.alert-light {
-  color: #818182;
-  background-color: #fefefe;
-  border-color: #fdfdfe;
-}
-
-.alert-light hr {
-  border-top-color: #ececf6;
-}
-
-.alert-light .alert-link {
-  color: #686868;
-}
-
-.alert-dark {
-  color: #1b1e21;
-  background-color: #d6d8d9;
-  border-color: #c6c8ca;
-}
-
-.alert-dark hr {
-  border-top-color: #b9bbbe;
-}
-
-.alert-dark .alert-link {
-  color: #040505;
 }
 
 @keyframes progress-bar-stripes {

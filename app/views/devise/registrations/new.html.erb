@@ -1,4 +1,4 @@
-<div class="container h-100">
+<div class="container h-100 bg-log">
   <div class="d-flex justify-content-center h-100">
     <div class="user_card">
       <div class="d-flex justify-content-center">
@@ -15,16 +15,16 @@
             </div>
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control input_user neo-form', placeholder:"Email" %>
           </div>
-          <div class="input-group mb-2">
+          <div class="input-group mb-3">
             <div class="input-group-append">
               <span class="input-group-text"><i class="fas fa-key"></i></span>
             </div>
                 <%= f.password_field :password, autocomplete: "new-password", class: 'form-control input_pass neo-form', placeholder:"mots de passe" %>
             </div>
 
-              <div class="input-group mb-3">
+              <div class="input-group mb-5">
             <div class="input-group-append">
-              <span class="input-group-text"><i class="fas fa-user"></i></span>
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
             </div>
             <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control input_pass neo-form', placeholder:"confirmer votre mots de passe" %>
           </div>

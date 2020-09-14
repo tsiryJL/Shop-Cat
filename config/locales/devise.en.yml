@@ -4,29 +4,29 @@ en:
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
-      send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+      send_instructions: "Vous allez recevoir un email de confirmation."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
     failure:
-      already_authenticated: "You are already signed in."
-      inactive: "Your account is not activated yet."
-      invalid: "Invalid %{authentication_keys} or password."
-      locked: "Your account is locked."
+      already_authenticated: "Vous êtes maintenant inscrit."
+      inactive: "Votre compte a été activer."
+      invalid: " %{authentication_keys} ou Mots de passe incorrect."
+      locked: "Votre compte est bloqué"
       last_attempt: "You have one more attempt before your account is locked."
-      not_found_in_database: "Invalid %{authentication_keys} or password."
-      timeout: "Your session expired. Please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your email address before continuing."
+      not_found_in_database: "Votre %{authentication_keys} ou mots de passe incorrect ."
+      timeout: "Votre session a été expiré, Merci de se connecter à nouveaux."
+      unauthenticated: "Vous devez vous connecter ou vous inscrires avant de continuer."
+      unconfirmed: "Vous devez confirmer votre email avant de continuer"
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: "Instruction de confirmation"
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: "Instruction resauration mots de passe"
       unlock_instructions:
         subject: "Unlock instructions"
       email_changed:
-        subject: "Email Changed"
+        subject: "Votre addresse email a été changé avec succès"
       password_change:
-        subject: "Password Changed"
+        subject: "Votre mots de passe a été changé avec succès"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
@@ -46,8 +46,8 @@ en:
       updated: "Your account has been updated successfully."
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
     sessions:
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
+      signed_in: "Bonjour! Vous êtes connecter."
+      signed_out: "Vous êtes déconnecter"
       already_signed_out: "Signed out successfully."
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
@@ -58,8 +58,8 @@ en:
       already_confirmed: "was already confirmed, please try signing in"
       confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
       expired: "has expired, please request a new one"
-      not_found: "not found"
+      not_found: "non reconnu"
       not_locked: "was not locked"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "1 erreur sur %{resource}:"
+        other: "%{count} erreurr sur %{resource} :"

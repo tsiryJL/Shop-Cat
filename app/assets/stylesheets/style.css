@@ -167,7 +167,8 @@
 
 .flash-popup{
     position: absolute;
-    top: 5em;
+    top: 4em;
     right: 2%;
     z-index: 1;
-  }
+}
+

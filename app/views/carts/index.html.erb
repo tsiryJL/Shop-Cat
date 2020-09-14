@@ -24,7 +24,7 @@
                                 <td> <%= i.item.title%> </td>
                                 <td> <%= i.item.description %> </td>
                                 <td> <%= i.quantity %></td>
-                                <td> <%= number_to_currency i.item.price * i.quantity, unit: "$", separator: ",", format: "%n%u" %> </td>
+                                <td> <%= number_to_currency i.item.price * i.quantity, unit: " AR", separator: ",", format: "%n%u" %> </td>
                             </tr>
                         <% end %>
                         <tr class="bg-yellow">
@@ -32,7 +32,7 @@
                             <td></td>
                             <td></td>
                             <td> <%= @quantity_total %> </td>
-                            <td> <%= number_to_currency @price_total, unit: "$", separator: ",", format: "%n%u" %> </td>
+                            <td> <%= number_to_currency @price_total, unit: " AR", separator: ",", format: "%n%u" %> </td>
                         </tr>
                     </tbody>
                 </table>
