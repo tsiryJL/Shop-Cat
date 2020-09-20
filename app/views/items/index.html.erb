@@ -29,7 +29,7 @@
         </div>
       </div>					
       <div class="row justify-content-center">
-        <div class="col-lg-3 col-md-6 m-1 p-3 card">
+        <div class="col-lg-3 col-md-6 m-1 p-3 card-bg">
           <div class="single-process">
             <span class="lnr lnr-thumbs-up"></span>
               <h4 class="m">
@@ -40,7 +40,7 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 m-1 p-3 card">
+        <div class="col-lg-3 col-md-6 m-1 p-3 card-bg">
           <div class="single-process">
             <span class="lnr lnr-user"></span>
               <h4 class="m">
@@ -51,7 +51,7 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 m-1 p-3 card">
+        <div class="col-lg-3 col-md-6 m-1 p-3 card-bg">
           <div class="single-process">
             <span class="lnr lnr-license"></span>
               <h4 class="m">
@@ -75,7 +75,7 @@
   <% @item.each do |i| %>
     <div class="col-sm-4 mb-4 card-shadow">
 
-      <div class="card h-100 shadow">
+      <div class="card-bg h-100 shadow">
         <a href="<%= item_path(i.id) %>"><%= image_tag i.image_url, width: '100%', style:"border-radius: 1em 1em 0em 0em"  %></a>
         <div class="card-body" style="border-top:3px solid #ffc107;">
             <h4 class="card-title">

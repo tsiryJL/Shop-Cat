@@ -26,7 +26,7 @@ class CartsController < ApplicationController
                 end
                 if @reponse == true
                         @order.quantity = @order.quantity + 1 
-                        @order.save  
+                        @order.save 
                 else
                     order = Order.create(:cart => current_cart, :item => item, :quantity => params[:quantity])
                 end
@@ -38,7 +38,7 @@ class CartsController < ApplicationController
             order = Order.create(:cart => current_cart, :item => item, :quantity => params[:quantity])
         end
 
-        
+        redirect_to '/', :flash => {:success => 'Produit ajouté au panier.'}
 
     end
 

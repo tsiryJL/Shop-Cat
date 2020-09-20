@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container card-bg mt-5 mb-5">
     <div class="row p-4">
         <div class="col-sm-12">
-            <h1 class="text-center mb-4"> Contenu du panier</h1>
+            <h1 class="text-center mb-5"> Contenu du panier</h1>
 
              <% if @cart_items %>
                 <table class="table table-striped table-hover">
@@ -35,7 +35,7 @@
                     </tbody>
                 </table>
 
-            <%= link_to 'Passer commande', orders_path, method: 'post', class: 'btn btn-outline-primary float-right' %>
+            <%= link_to 'Passer la commande', orders_path, method: 'post', class: 'btn btn-info mt-4 float-right' %>
 
         <% else %>
             <h3 class="text-center text-muted">Panier vide</h3>
