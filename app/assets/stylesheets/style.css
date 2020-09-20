@@ -184,3 +184,10 @@
     background: #ffffff;
     box-shadow: 8px 8px 16px #cfd5d9, -8px -8px 16px #f7ffff;
 }
+
+.neo-bg{
+border-radius: 9px;
+background: #f5f5f5;
+box-shadow: inset 9px 9px 7px #e1e1e1, 
+            inset -9px -9px 7px #ffffff;
+}

@@ -69,14 +69,14 @@
 <!-- End process Area -->
 			
 
-<div class="container">
+<div class="p-5 neo-bg">
   <div class="row">
 
   <% @item.each do |i| %>
     <div class="col-sm-4 mb-4 card-shadow">
 
       <div class="card h-100 shadow">
-        <a href="<%= item_path(i.id) %>"><%= image_tag i.image_url, width: '100%', class: ''  %></a>
+        <a href="<%= item_path(i.id) %>"><%= image_tag i.image_url, width: '100%', style:"border-radius: 1em 1em 0em 0em"  %></a>
         <div class="card-body" style="border-top:3px solid #ffc107;">
             <h4 class="card-title">
                 <%= i.title %>
@@ -95,7 +95,7 @@
                   </div>
                 </div>
               </div>
-              <%= link_to 'Voir', item_path(i.id), class: "btn btn-primary" %>
+              <%= link_to 'Voir', item_path(i.id), class: "btn btn-info" %>
               <%= submit_tag "Ajouter au panier", class: 'btn btn-outline-primary float-right' %>
             <% end %>
             <span class="entourer2">
