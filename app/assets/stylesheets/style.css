@@ -37,8 +37,10 @@
     scroll-behavior: smooth;
 }
 
-.card-shadow:hover{
-    box-shadow: 0px 0px 10px black;
+.t{
+    font-size: xx-large;
+    font-weight: bold;
+    color: #182b58;
 }
 
 .cardImg {
@@ -172,3 +174,13 @@
     z-index: 1;
 }
 
+.m{
+    color: #9c5700;
+    font-weight: bold;
+}
+
+.card{
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 8px 8px 16px #cfd5d9, -8px -8px 16px #f7ffff;
+}

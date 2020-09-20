@@ -38,7 +38,7 @@ class CartsController < ApplicationController
             order = Order.create(:cart => current_cart, :item => item, :quantity => params[:quantity])
         end
 
-        redirect_to '/', :flash => {:success => 'Produit ajouté au panier.'}
+        
 
     end
 
