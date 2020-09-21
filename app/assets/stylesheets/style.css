@@ -191,3 +191,7 @@ background: #f5f5f5;
 box-shadow: inset 9px 9px 7px #e1e1e1, 
             inset -9px -9px 7px #ffffff;
 }
+
+.navbar-link:hover{
+    color: rgb(192, 179, 0);
+}
